@@ -1,15 +1,18 @@
+import { AboutMe } from "../Components/AboutMe";
+import { HeroSection } from "../Components/HeroSection";
 import { Navbar } from "../Components/Navbar";
-import { ThemeToggle } from "../Components/ThemeToggle";
+import { Skills } from "../Components/Skills";
 
 export const Home = () => {
     return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
         <div className="flex">
-            <ThemeToggle/>
-            <Navbar/>
+          <Navbar/>  
 
-            <main>
-                <HeroSection/>
-            </main>
+        <main>
+            <HeroSection/>
+            <AboutMe/>
+            <Skills/>
+        </main>
         </div>
     </div>
 };

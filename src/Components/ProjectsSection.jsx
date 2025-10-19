@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react"
+import { ArrowRight, ExternalLink, Github } from "lucide-react"
 
 
 const projects = [
@@ -51,7 +51,7 @@ export const ProjectsSection =()=> {
                             <div className="p-6">
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tags.map((tag, key) => (
-                                        <span className="px-2 py-1 text-xs font-medium rounded-full bg-secondary-foreground">{tag}</span>
+                                        <span key={key} className="px-2 py-1 text-xs font-medium rounded-full bg-secondary-foreground">{tag}</span>
                                     ))}
                                 </div>
                             </div>
@@ -80,6 +80,11 @@ export const ProjectsSection =()=> {
                         </div>
                     ))}
                 </div>
+                </div>
+                <div className="text-center mt-12 w-full flex items-center mx-auto gap-2 justify-center flex-col">
+                    <a href="https://github.com/MichaelOdaba" className="my-button">
+                        Check My Github <Github size={16} className="ml-13 mt-1"/>
+                    </a>
                 </div>
            </section>
 }

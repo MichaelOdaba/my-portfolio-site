@@ -32,7 +32,7 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "hover:mb-2 lg:ml-65 transition duration-300"
+        "hover:mb-2 lg:ml-70 transition duration-300"
       )}
     >
       {isDarkMode ? (

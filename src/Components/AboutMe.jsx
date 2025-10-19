@@ -17,7 +17,7 @@ export const AboutMe =()=> {
                         <p className="text-1.9xl font-semibold">Passionate Software Engineer</p>
 
                         <p className="text-muted-foreground">
-                            With over 3 years of experience in software development and backend engineering, I specialize in creating stellar software applications using mordern technologies.
+                            With over 3 years of experience in software development, I specialize in creating stellar software applications using modern technologies.
                         </p>
 
                         <p>

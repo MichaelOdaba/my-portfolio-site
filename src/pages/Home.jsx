@@ -5,6 +5,7 @@ import { Skills } from "../Components/Skills";
 import { ProjectsSection } from "../Components/ProjectsSection";
 import { ContactMe } from "../Components/ContactMe";
 import { Extra } from "../Components/Extra";
+import {Footer} from "../Components/Footer";
 
 
 export const Home = () => {
@@ -18,8 +19,10 @@ export const Home = () => {
             <Skills/>
             <ProjectsSection/>
             <ContactMe/>
-            <Extra/>
+            <Footer/>
         </main>
+
+
         </div>
     </div>
 };

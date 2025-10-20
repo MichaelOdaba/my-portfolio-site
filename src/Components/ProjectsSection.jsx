@@ -5,7 +5,7 @@ const projects = [
     {
         id: 1,
         title: "Leave Management App",
-        Description: "A leave management app using React, Typescript and Django rest framework",
+        Description: "Collaborated in maintaining a leave management app using React, Typescript and Django rest framework",
         image: "/public/projects/Projects1.png",
         tags: ["React", "TailwindCSS", "Typescript", "Django", "PostgresSQL"],
         demoUrl: "#",
@@ -22,10 +22,10 @@ const projects = [
     },
     {
         id: 3,
-        title: "Dummy App",
-        Description: "A leave management app using React, Typescript and Django rest framework",
-        tags: ["React", "TailwindCSS", "Supabase"],
-        image: "/public/projects/Projects1.png",
+        title: "Rock Paper Scissors Terminal Game",
+        Description: "A simple rock paper scissors game built using python that runs on the terminal",
+        tags: ["Python"],
+        image: "/public/projects/Screenshot (29).png",
         demoUrl: "#",
         githubUrl: "#",
     },

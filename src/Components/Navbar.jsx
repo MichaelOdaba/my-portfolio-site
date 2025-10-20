@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-  { name: "?", href: "#extra" }
+  { name: "Home", href: "#hero", title: "Home Section" },
+  { name: "About", href: "#about", title: "About Section" },
+  { name: "Skills", href: "#skills", title: "Skills Section"  },
+  { name: "Projects", href: "#projects", title: "Projects Section"  },
+  { name: "Contact", href: "#contact", title: "Contact Section"  },
+  { name: "?", href: "#extra", title: "random stuff" }
 ];
 
 export const Navbar = () => {
@@ -49,6 +49,7 @@ export const Navbar = () => {
             <a
               key={key}
               href={item.href}
+              title={item.title}
               className="text-foreground/80 hover:text-primary transition-colors duration-300 hover:scale-[1.1]"
             >
               {item.name}

@@ -5,7 +5,7 @@ export const Footer =()=> {
         {" "}
         <p className="text-sm text-muted-foreground"> &copy; {new Date().getFullYear()} MichaelOdaba.com. All rights reserved.</p>
 
-        <a href="#hero" className="hover:text-primary animate-bounce">
+        <a href="#hero" className="hover:text-primary animate-bounce mr-6">
             <ArrowUp size={20}/>
         </a>
     </footer>

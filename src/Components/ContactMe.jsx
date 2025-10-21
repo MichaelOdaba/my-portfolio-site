@@ -148,6 +148,7 @@ export const ContactMe =()=> {
                             )}>
                                 {isSubmitting ? <Loader size={16}/> : <Send size={16}/>}
                             </button>
+                            <p className="font-thin italic">Cant recieve messages directly for now, still working on that feature....pls send directly through email. the link is on the left🙏</p>
                         </form>
                     </div>
                 </div>

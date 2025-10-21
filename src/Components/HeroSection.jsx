@@ -1,6 +1,12 @@
 import { ArrowDown } from "lucide-react"
+import SplitText from "../Components/ui/SplitText"
+import DecryptedText from "./ui/DecryptedText";
 
 export const HeroSection =()=> {
+
+    const handleAnimationComplete = () => {
+  console.log('All letters have animated!');
+};
     
     return <section id="hero" className="relative min-h-screen flex flex-col items-center w-dvw justify-center">
 
@@ -10,8 +16,30 @@ export const HeroSection =()=> {
                 </div>
 
                 <div className="h-full mb-12">
-                    <h1 className="text-5xl font-bold"><span className="text-glow">Hi</span>, i am <span className="text-primary">Michael</span> Odaba</h1>
-                    <h2 className="mt-3 font-serif mt-6">I create stellar software experiences with modern technologies for web and mobile, i build applications that are beautiful, functional and scalable.</h2>
+                    <SplitText
+                        text="Hi, I am Michael Odaba"
+                        className="text-2xl font-semibold text-center font-heading sm:text-4xl"
+                        delay={100}
+                        duration={0.6}
+                        ease="power3.out"
+                        splitType="chars"
+                        from={{ opacity: 0, y: 40 }}
+                        to={{ opacity: 1, y: 0 }}
+                        threshold={0.1}
+                        rootMargin="-100px"
+                        textAlign="center"
+                        onLetterAnimationComplete={handleAnimationComplete}
+                    />
+
+                    <div className="mt-2">
+                    <DecryptedText
+                    text="I build stellar applications for web and mobile that are scalable and beautiful using modern technologies"
+                    animateOn="view"
+                    revealDirection="center"
+                    className="text-sm"
+                    />
+                    </div>
+                  
                 </div>
              
                 

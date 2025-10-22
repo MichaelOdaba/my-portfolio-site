@@ -1,5 +1,5 @@
 import { ArrowDown } from "lucide-react"
-import SplitText from "../Components/ui/SplitText"
+import SplitText from "./ui/SplitText"
 import DecryptedText from "./ui/DecryptedText";
 
 export const HeroSection =()=> {

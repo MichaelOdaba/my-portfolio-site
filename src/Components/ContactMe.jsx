@@ -87,7 +87,7 @@ export const ContactMe =()=> {
                             {" "}
                         <h4 className="font-medium mb-4">Connect with Me</h4>
                         <div className="flex space-x-4 justify-center">
-                            <a href="" className="mb-4 hover:text-primary">
+                            <a href="https://www.linkedin.com/feed/" className="mb-4 hover:text-primary">
                                 <Linkedin/>
                             </a>
 
@@ -95,11 +95,11 @@ export const ContactMe =()=> {
                                 <Twitter/>
                             </a>
 
-                            <a href="" className="hover:text-primary">
+                            <a href="https://www.instagram.com/Michaelodaba" className="hover:text-primary">
                                 <Instagram/>
                             </a>
 
-                            <a href="" className="hover:text-primary">
+                            <a href="https://www.facebook.com/Michaelodaba" className="hover:text-primary">
                                 <Facebook/>
                             </a>
                         </div>

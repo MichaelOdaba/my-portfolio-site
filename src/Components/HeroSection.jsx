@@ -5,7 +5,7 @@ import DecryptedText from "./ui/DecryptedText";
 export const HeroSection =()=> {
 
     const handleAnimationComplete = () => {
-  console.log('All letters have animated!');
+  
 };
     
     return <section id="hero" className="relative min-h-screen flex flex-col items-center w-dvw justify-center">

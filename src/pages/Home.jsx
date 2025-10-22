@@ -4,7 +4,6 @@ import { Navbar } from "../components/Navbar";
 import { Skills } from "../components/Skills";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactMe } from "../components/ContactMe";
-import { Extra } from "../components/Extra";
 import {Footer} from "../components/Footer";
 
 

@@ -12,9 +12,13 @@ export const HeroSection =()=> {
 
                 {/* add a reactbits component */}
                 <div className="h-40 w-40 mb-16 rounded-full mt-3">
-                    <img src="/projects/profile3.jpg" alt="my handsome Image😏" className="rounded-4xl border-primary border-2 hover:border-green-500" />
+               <img
+                 src="https://michael-odaba-portfolio.netlify.app/projects/profile3.jpg" 
+                 alt="my handsome image 😏"
+                className="rounded-4xl border-primary border-2 hover:border-green-500"                    
+                        />
 
-                </div>
+</div>
 
                 <div className="h-full mb-12">
                     <SplitText

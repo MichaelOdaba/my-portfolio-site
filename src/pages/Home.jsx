@@ -18,7 +18,6 @@ export const Home = () => {
             <Skills/>
             <ProjectsSection/>
             <ContactMe/>
-            <Extra/>
             <Footer/>
         </main>
 

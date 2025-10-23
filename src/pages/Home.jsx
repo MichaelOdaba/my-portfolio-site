@@ -1,10 +1,11 @@
-import { AboutMe } from "../components/AboutMe";
-import { HeroSection } from "../components/HeroSection";
-import { Navbar } from "../components/Navbar";
-import { Skills } from "../components/Skills";
-import { ProjectsSection } from "../components/ProjectsSection";
-import { ContactMe } from "../components/ContactMe";
-import {Footer} from "../components/Footer";
+import { AboutMe } from "../Components/AboutMe";
+import { HeroSection } from "../Components/HeroSection";
+import { Navbar } from "../Components/Navbar";
+import { Skills } from "../Components/Skills";
+import { ProjectsSection } from "../Components/ProjectsSection";
+import { ContactMe } from "../Components/ContactMe";
+import { Footer } from "../Components/Footer";
+import { Extra } from "../Components/Extra";
 
 
 export const Home = () => {

@@ -1,7 +1,6 @@
 import { ArrowDown } from "lucide-react"
 import SplitText from "./ui/SplitText"
 import DecryptedText from "./ui/DecryptedText";
-
 export const HeroSection =()=> {
 
     const handleAnimationComplete = () => {
@@ -9,7 +8,7 @@ export const HeroSection =()=> {
 };
     
     return <section id="hero" className="relative min-h-screen flex flex-col items-center w-dvw justify-center">
-
+                
                 {/* add a reactbits component */}
                 <div className="h-40 w-40 mb-16 rounded-full mt-3">
                     <img src="projects/profile3.jpg" alt="my handsome Image😏" className="rounded-4xl border-primary border-2 hover:border-green-500" />

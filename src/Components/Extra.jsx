@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 const images = [
     {
         src: "/public/projects/RandomImages/Random1.jpg",
-        description: "A picture of me playing the piano in service"
+        description: "A picture of me playing the piano in service.....Fun fact: i play the piano and i have been told i am good at it🙂"
     },
     {
         src: "/public/projects/RandomImages/Random2.jpg",
@@ -36,32 +36,24 @@ const images = [
     
 ]
 export const Extra =()=> {
-    const prevSlide =()=> {
-        
-    }
-    const nextSlide =()=> {
-        
-    }
 
     return <section className="py-24 px-4 relative">
             <div className="container mx-auto max-w-5xl" id="extra">
                 <p className="text-3xl md:text-4xl font-bold mb-4 text-center">
                     <span className="text-primary">?</span></p>
-                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Fun facts about <span className="text-glow text-primary">me</span></p>
-                <div className="grid grid-cols-1 gap-12">
-                    <div className="">
+                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Extra photos and fun stuff about <span className="text-glow text-primary">me</span></p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                         {
                             images.map((image, key) => (
-                                <div className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover all mt-3 mb-3 flex">
-                                    <img src={image.src} alt={image.description} key={key} className="w-100"/>
-                                    <h2 className="text-2xl p-3">{image.description}</h2>
+                                <div className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover all mt-3 mb-3 flex w-full h-auto flex-col">
+                                    <img src={image.src} alt={image.description} key={key} className="w-full group-hover:scale-110 transition-transform duration-500"/>
+                                    <h2 className="text-1.6xl p-3">{image.description}</h2>
                                 </div>
                             ))
                         }
-                        <button className="my-button text-2xl mt-5 mr-2" onClick={prevSlide}><ArrowLeft></ArrowLeft></button>
-                        <button className="my-button text-2xl mt-5 ml-2" onClick={nextSlide}><ArrowRight></ArrowRight></button>
                     </div>
                 </div>
-            </div>
     </section>
 }

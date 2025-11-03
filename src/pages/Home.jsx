@@ -5,7 +5,8 @@ import { Skills } from "../Components/Skills";
 import { ProjectsSection } from "../Components/ProjectsSection";
 import { ContactMe } from "../Components/ContactMe";
 import { Footer } from "../Components/Footer";
-import { Extra } from "../Components/Extra";
+import { Extra } from "../components/Extra";
+
 
 
 export const Home = () => {

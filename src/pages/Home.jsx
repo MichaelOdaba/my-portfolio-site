@@ -1,30 +1,26 @@
 import { AboutMe } from "../Components/AboutMe";
 import { HeroSection } from "../Components/HeroSection";
 import { Navbar } from "../Components/Navbar";
-import { Skills } from "../Components/Skills";
-import { ProjectsSection } from "../Components/ProjectsSection";
+import { Skills } from "../components/Skills";
+import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactMe } from "../Components/ContactMe";
 import { Footer } from "../Components/Footer";
-import { Extra } from "../components/Extra";
-
-
 
 export const Home = () => {
-    return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-        <div className="flex">
-          <Navbar/>  
+  return (
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <div className="flex">
+        <Navbar />
 
         <main>
-            <HeroSection/>
-            <AboutMe/>
-            <Skills/>
-            <ProjectsSection/>
-            <ContactMe/>
-            <Extra/>
-            <Footer/>
+          <HeroSection />
+          <AboutMe />
+          <Skills />
+          <ProjectsSection />
+          <ContactMe />
+          <Footer />
         </main>
-
-
-        </div>
+      </div>
     </div>
+  );
 };

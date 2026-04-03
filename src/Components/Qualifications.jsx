@@ -37,6 +37,7 @@ const Qualifications = () => {
                     src={certification.logo}
                     alt="issuer logo"
                     className="h-52 w-52 transition-transform duration-500 group-hover:scale-110"
+                    key={key}
                   />
 
                   <p className="text-xl font-bold">{certification.name}</p>

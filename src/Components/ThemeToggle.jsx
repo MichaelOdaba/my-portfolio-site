@@ -31,9 +31,7 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className={cn(
-        "hover:mb-2 lg:ml-73 transition duration-300"
-      )}
+      className={cn("lg:ml-73 transition duration-300")}
     >
       {isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />

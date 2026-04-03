@@ -4,12 +4,16 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
-  { name: "Home", href: "#hero", title: "Home Section" },
   { name: "About", href: "#about", title: "About Section" },
-  { name: "Skills", href: "#skills", title: "Skills Section"  },
-  { name: "Projects", href: "#projects", title: "Projects Section"  },
-  { name: "Contact", href: "#contact", title: "Contact Section"  },
-  { name: "?", href: "#extra", title: "random stuff" }
+  { name: "Skills", href: "#skills", title: "Skills Section" },
+  { name: "Projects", href: "#projects", title: "Projects Section" },
+  {
+    name: "Certifications",
+    href: "#qualifications",
+    title: "Qualifications Section",
+  },
+
+  { name: "Contact", href: "#contact", title: "Contact Section" },
 ];
 
 export const Navbar = () => {
@@ -18,7 +22,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(true);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,8 +31,8 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        "fixed w-full z-40 transition-all duration-300 h-15",
+        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-md" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
@@ -37,11 +41,10 @@ export const Navbar = () => {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> MO </span>{" "}
-            Portfolio
+            <span className="text-glow text-foreground"> MO </span> Portfolio
           </span>
         </a>
-        <ThemeToggle/>
+        <ThemeToggle />
 
         {/* desktop nav */}
         <div className="hidden md:flex space-x-8">

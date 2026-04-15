@@ -31,7 +31,10 @@ const Qualifications = () => {
         <div className="grid grid-cols-1 gap-10">
           {certifications.map((certification, key) => {
             return (
-              <div className="group bg-card card-hover p-3 py-7 rounded-md">
+              <div
+                className="group bg-card card-hover p-3 py-7 rounded-md"
+                key={key}
+              >
                 <div className="flex flex-col gap-2 justify-between items-center">
                   <img
                     src={certification.logo}

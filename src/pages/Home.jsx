@@ -1,10 +1,10 @@
-import { AboutMe } from "../Components/AboutMe";
+import { AboutMe } from "../components/AboutMe";
 import { HeroSection } from "../components/HeroSection";
 import { Navbar } from "../components/Navbar";
 import { Skills } from "../components/Skills";
 import { ProjectsSection } from "../components/ProjectsSection";
-import { ContactMe } from "../Components/ContactMe";
-import { Footer } from "../Components/Footer";
+import { ContactMe } from "../components/ContactMe";
+import { Footer } from "../components/Footer";
 import Qualifications from "../components/Qualifications";
 import LightRays from "../components/ui/LightRays";
 

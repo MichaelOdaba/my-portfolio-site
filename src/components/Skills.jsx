@@ -1,3 +1,5 @@
+import { useState, useEffect, useRef } from "react";
+
 const skills = [
   { name: "HTML/CSS", level: 80, category: "front-end" },
   { name: "Javascript", level: 90, category: "front-end" },
@@ -17,8 +19,37 @@ const skills = [
 ];
 
 export const Skills = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
+    <section
+      id="skills"
+      ref={sectionRef}
+      className="py-24 px-4 relative bg-secondary/30"
+    >
       <div className="container mx-auto max-w-5xl">
         <p className="text-2xl md:text-3xl font-bold mb-12 text-center">
           My <span className="text-primary">Skills</span>
@@ -36,8 +67,10 @@ export const Skills = () => {
 
               <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden"></div>
               <div
-                className="bg-primary h-2 rounded-full origin-left animate-fade-in"
-                style={{ width: skill.level + "%" }}
+                className={`bg-primary h-2 rounded-full origin-left ${
+                  isVisible ? "animate-skill-bar" : ""
+                }`}
+                style={{ width: isVisible ? skill.level + "%" : "0%" }}
               />
               <div className="text-right mt-1">
                 <span className="text-sm text-muted-foreground">

@@ -1,7 +1,6 @@
 import { ArrowDown, User } from "lucide-react";
 import SplitText from "./ui/SplitText";
 import DecryptedText from "./ui/DecryptedText";
-import LightRays from "./ui/LightRays";
 
 export const HeroSection = () => {
   const handleAnimationComplete = () => {};
@@ -11,23 +10,6 @@ export const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex flex-col items-center w-dvw justify-center overflow-hidden p-2 text-center"
     >
-      <div className="absolute inset-0 z-0">
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#ffffff"
-          raysSpeed={0.8}
-          lightSpread={1.5}
-          rayLength={2.5}
-          pulsating={false}
-          fadeDistance={1.2}
-          saturation={0.8}
-          followMouse={true}
-          mouseInfluence={0.15}
-          noiseAmount={0.1}
-          distortion={0.2}
-          className="opacity-30"
-        />
-      </div>
       <div className="relative z-10">
         {/* add a reactbits component */}
 

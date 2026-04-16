@@ -6,26 +6,21 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactMe } from "../components/ContactMe";
 import { Footer } from "../components/Footer";
 import Qualifications from "../components/Qualifications";
-import LightRays from "../components/ui/LightRays";
-
+import PixelBlast from "../components/ui/PixelBlast";
 export const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#ffffff"
-          raysSpeed={0.5}
-          lightSpread={2}
-          rayLength={3}
-          pulsating={false}
-          fadeDistance={1.5}
-          saturation={0.6}
-          followMouse={true}
-          mouseInfluence={0.08}
-          noiseAmount={0.05}
-          distortion={0.1}
-          className="opacity-20"
+        <PixelBlast
+          variant="circle"
+          color="#ffffff"
+          pixelSize={4}
+          patternDensity={0.85}
+          speed={0.5}
+          enableRipples={true}
+          rippleIntensityScale={0.8}
+          transparent={true}
+          className="opacity-50"
         />
       </div>
       <div className="flex relative z-10 w-full flex-col md:flex-row">

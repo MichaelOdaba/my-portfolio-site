@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 @import "tailwindcss";
 
@@ -20,6 +20,7 @@
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   --animate-meteor: meteor 5s linear infinite;
+  --animate-skill-bar: skill-bar 0.8s ease-out forwards;
 
   @keyframes float {
     0%,
@@ -60,6 +61,14 @@
     100% {
       transform: rotate(215deg) translateX(-500px);
       opacity: 0;
+    }
+  }
+  @keyframes skill-bar {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
     }
   }
 }
@@ -145,9 +154,6 @@
          transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
          hover:scale-105 active:scale-95;
 }
-
-
-
 
 #root {
   max-width: 100%;

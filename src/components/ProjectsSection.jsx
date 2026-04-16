@@ -4,22 +4,29 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
-    title: "Leave Management App",
+    title: "FeePay App",
     Description:
-      "Collaborated in maintaining a leave management app using React, Typescript and Django rest framework",
-    image: "projects/Projects1.png",
-    tags: ["React", "TailwindCSS", "Typescript", "Django", "PostgresSQL"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "FeePay provides a centralized, secure, and user-friendly system for students, parents, and bursary staff to manage school fee payments digitally — eliminating long queues, manual processing, and lack of payment transparency.",
+    image: "projects/project4.png",
+    tags: ["React", "TailwindCSS", "Supabase", "PostgresSQL"],
+    demoUrl: "https://feepayapp.netlify.app/login",
+    githubUrl: "https://github.com/MichaelOdaba/FeePay",
   },
   {
     id: 2,
-    title: "Portfolio Site",
-    Description: "A beautiful portfolio site built using react and TailwindCSS",
-    image: "projects/Screenshot (28).png",
-    tags: ["React", "TailwindCSS", "Vercel"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Leave Management System",
+    Description:
+      "A leave management system built with React and TailwindCSS for efficient employee leave tracking.",
+    image: "projects/Projects1.png",
+    tags: [
+      "React",
+      "TailwindCSS",
+      "Django",
+      "PostgreSQL",
+      "Django rest framework",
+    ],
+    demoUrl: "not available",
+    githubUrl: "private repo",
   },
   {
     id: 3,
@@ -28,8 +35,8 @@ const projects = [
       "  This app is a pdf marketplace place where users can buy and sell Ebooks, i built this as a solution to sellers manually selling hard copies of past questions and books in my school, so i am building this platform for users to buy and sell Ebooks and PDFs online.",
     tags: ["React", "Express/NodeJs", "Tailwindcss", "Typescript"],
     image: "projects/readmarket.png",
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://readmarket.vercel.app/",
+    githubUrl: "https://github.com/MichaelOdaba/readmarket",
   },
 ];
 

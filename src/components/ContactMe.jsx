@@ -15,20 +15,73 @@ import { toast } from "../hooks/use-toast";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
+// Get your form endpoint from https://formspree.io
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaqaewne";
+
 export const ContactMe = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setIsSubmitting(true);
-    setTimeout(() => {
+    if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon",
+        title: "Error",
+        description: "Please fill in all fields",
+        variant: "destructive",
       });
-      setIsSubmitting(false);
-    }, 1500);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          toast({
+            title: "Message sent!",
+            description:
+              "Thank you for your message. I'll get back to you soon",
+          });
+          setFormData({ name: "", email: "", message: "" });
+          setIsSubmitting(false);
+        } else {
+          throw new Error("Form submission failed");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        toast({
+          title: "Error",
+          description:
+            "Failed to send message. Please check your internet or email me directly at odabamichael1@gmail.com",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -141,6 +194,8 @@ export const ContactMe = () => {
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                     placeholder="Michael Odaba"
@@ -158,6 +213,8 @@ export const ContactMe = () => {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                     placeholder="odabamichael@gmail.com"
@@ -172,9 +229,10 @@ export const ContactMe = () => {
                     Your Message:{" "}
                   </label>
                   <textarea
-                    type="text"
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                     placeholder="Hello Michael, i would like to talk about..."
@@ -183,17 +241,15 @@ export const ContactMe = () => {
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className={cn(
-                    "my-button w-full flex items-center justify-center gap-2"
+                    "my-button w-full flex items-center justify-center gap-2",
+                    isSubmitting && "opacity-50 cursor-not-allowed"
                   )}
                 >
                   {isSubmitting ? <Loader size={16} /> : <Send size={16} />}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
-                <p className="font-thin italic">
-                  Cant recieve messages directly for now, still working on that
-                  feature....pls send directly through email. the link is on the
-                  left🙏
-                </p>
               </form>
             </div>
           </div>
